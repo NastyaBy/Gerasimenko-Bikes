@@ -1,0 +1,43 @@
+@import '../variables.scss';
+
+.data {
+  text-align: center;
+
+  &__title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.005em;
+    color: $data-title-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  &__item {
+    max-width: 265px;
+  }
+
+  &__item-title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    color: $accent-color;
+    letter-spacing: -1.27273px;
+  }
+
+  &__item-text {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 34px;
+    text-align: center;
+    color: $basic-dark;
+    letter-spacing: -0.5px;
+
+  }
+}

@@ -1,0 +1,42 @@
+@import '../variables.scss';
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin-bottom: 13px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.005em;
+    color: $contacts-title-color;
+
+    @include for-size(tablet) {
+      font-size: 24px;
+    }
+
+    @include for-size(phone-only) {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    margin: 15px 0 42px;
+    max-width: 500px;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 31px;
+    text-align: center;
+
+    @include for-size(tablet) {
+      max-width: 100%;
+      margin: 8px 17px 20px;
+    }
+
+  }
+
+
+}

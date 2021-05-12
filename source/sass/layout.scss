@@ -21,9 +21,11 @@
   }
 
   &__footer {
-    display: flex;
-    justify-content: center;
-    gap: 90px
+    padding: 24px 0 95px;
+
+    @include for-size(tablet) {
+      padding: 20px 0 53px;
+    }
   }
 }
 
@@ -39,4 +41,11 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.br-phone-only {
+  display: none;
+  @include for-size(phone-only) {
+    display: block;
+  }
 }

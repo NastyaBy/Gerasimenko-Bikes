@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 74px;
+
+  @include for-size(phone-only) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-right: 17px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: none;
+    cursor: pointer;
+    color: $footer-link-color;
+
+    @include for-size(phone-only) {
+      margin: 0;
+    }
+  }
+
+  &__link-icon {
+    margin-right: 15px;
+  }
+}
