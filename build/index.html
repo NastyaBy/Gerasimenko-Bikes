@@ -26,35 +26,36 @@
 <main class="layout__main">
   <h1 class="visually-hidden">Велосипеды</h1>
   <section class="intro">
+    <picture class="intro__picture">
+      <source type="image/webp" media="(min-width: 1024px)" srcset="./img/background-main-block-desktop@1x.webp 1x, ./img/background-main-block-desktop@2x.webp 2x">
+      <source type="image/webp" media="(min-width: 768px)" srcset="./img/background-main-block-tablet@1x.webp 1x, ./img/background-main-block-tablet@2x.webp 2x">
+      <source type="image/webp" srcset="./img/background-main-block-mobile@1x.webp 1x, ./img/background-main-block-mobile@2x.webp 2x">
+      <source media="(min-width: 1024px)" srcset="./img/background-main-block-desktop@1x.jpg 1x, ./img/background-main-block-desktop@2x.jpg 2x">
+      <source media="(min-width: 768px)" srcset="./img/background-main-block-tablet@1x.jpg 1x, ./img/background-main-block-tablet@2x.jpg 2x">
+      <img src="img/background-main-block-desktop@1x.jpg" srcset="./img/background-main-block-desktop@2x.jpg 2x" alt="Горный велосипед">
+    </picture>
     <div class="intro__inner">
-      <picture class="intro__picture">
-        <source type="image/webp" media="(min-width: 1024px)" srcset="./img/background-main-block-desktop@1x.webp 1x, ./img/background-main-block-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="./img/background-main-block-tablet@1x.webp 1x, ./img/background-main-block-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="./img/background-main-block-mobile@1x.webp 1x, ./img/background-main-block-mobile@2x.webp 2x">
-        <source media="(min-width: 1024px)" srcset="./img/background-main-block-desktop@1x.jpg 1x, ./img/background-main-block-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)" srcset="./img/background-main-block-tablet@1x.jpg 1x, ./img/background-main-block-tablet@2x.jpg 2x">
-        <img src="img/background-main-block-desktop@1x.jpg" srcset="./img/background-main-block-desktop@2x.jpg 2x" alt="Горный велосипед">
-      </picture>
       <div class="intro__info">
-
         <svg class="intro__logo" width="68" height="21">
           <use xlink:href="#logo"></use>
         </svg>
         <h2 class="intro__title">Мы продаем велосипеды </h2>
         <p class="intro__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
       </div>
-      <form class="form">
-        <h3 class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h3>
-        <div class="form-input">
-          <label class="form-input__title" for="name"></label>
-          <input class="form-input__input" type="text" id="name" placeholder="Введите Ваше Имя" aria-label="Поле для ввода имени">
-        </div>
-        <div class="form-input">
-          <label class="form-input__title" for="tel"></label>
-          <input class="form-input__input" id="tel" type="tel" placeholder="Введите Ваш номер телефона" aria-label="Поле для ввода телефона">
-        </div>
-        <button class="button button--form" type="submit">Подобрать велосипед мечты</button>
-      </form>
+      <div class="intro__form">
+        <form class="form">
+          <h3 class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h3>
+          <div class="form-input">
+            <label class="form-input__title" for="name"></label>
+            <input class="form-input__input" type="text" id="name" placeholder="Введите Ваше Имя" aria-label="Поле для ввода имени">
+          </div>
+          <div class="form-input">
+            <label class="form-input__title" for="tel"></label>
+            <input class="form-input__input" id="tel" type="tel" placeholder="Введите Ваш номер телефона" aria-label="Поле для ввода телефона">
+          </div>
+          <button class="button button--form" type="submit">Подобрать велосипед мечты</button>
+        </form>
+      </div>
     </div>
   </section>
 

@@ -17,16 +17,7 @@
   border-radius: 6px;
 
   &--form {
-    max-width: 325px;
     width: 100%;
-
-    @include for-size(tablet) {
-      max-width: 321px;
-    }
-
-    @include for-size(phone-only) {
-      max-width: 288px;
-    }
   }
 
 }

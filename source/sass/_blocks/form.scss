@@ -1,16 +1,7 @@
 @import '../variables.scss';
 
 .form {
-  @include for-size(tablet) {
-    max-width: 400px;
-    margin: 0;
-    padding: 0;
-    align-self: center;
-  }
-  @include for-size(phone-only) {
-    max-width: 288px;
-  }
-
+  position: relative;
 
   &__title {
     margin-bottom: 20px;

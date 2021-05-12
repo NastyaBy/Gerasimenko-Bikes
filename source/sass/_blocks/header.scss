@@ -1,9 +1,7 @@
 @import '../variables.scss';
 
 .header {
-  @include for-size(tablet) {
-    position: relative;
-  }
+  position: relative;
 
   &__nav {
     $header-nav: & !global;

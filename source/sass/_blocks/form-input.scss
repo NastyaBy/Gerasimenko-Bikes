@@ -4,7 +4,7 @@
   margin-bottom: 20px;
 
   &__input {
-    width: 327px;
+    width: 100%;
     padding: 14px 28px 8px;
     font-size: 15px;
     line-height: 24px;
@@ -13,13 +13,10 @@
     border-radius: 6px;
 
     @include for-size(tablet) {
-      width: 321px;
       padding: 13px 21px 9px;
     }
 
     @include for-size(phone-only) {
-      width: 288px;
-      min-width: 100%;
       padding: 13px 25px 9px;
     }
   }

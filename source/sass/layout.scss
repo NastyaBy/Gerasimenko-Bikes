@@ -12,8 +12,9 @@
 
   &__header {
     position: relative;
+    z-index: 2;
     max-width: 875px;
-    margin: 0 auto -63px;
+    margin: 0 auto;
 
     @include for-size(tablet) {
       margin: 0;
