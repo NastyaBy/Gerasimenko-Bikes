@@ -1,0 +1,32 @@
+@import '../variables.scss';
+
+.button {
+  margin: 0;
+  padding: 16px 28px 14px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  color: $basic-dark;
+  background: $accent-color;
+  text-decoration: none;
+  text-align: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  border-radius: 6px;
+
+  &--form {
+    max-width: 325px;
+    width: 100%;
+
+    @include for-size(tablet) {
+      max-width: 321px;
+    }
+
+    @include for-size(phone-only) {
+      max-width: 288px;
+    }
+  }
+
+}

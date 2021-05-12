@@ -1,3 +1,36 @@
 @import '../variables.scss';
 
-.form
+.form {
+  @include for-size(tablet) {
+    max-width: 400px;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+  }
+  @include for-size(phone-only) {
+    max-width: 288px;
+  }
+
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.005em;
+    color: $basic-white;
+
+    @include for-size(tablet) {
+      color: $basic-dark;
+      max-width: 321px;
+      margin: 16px 0 30px;
+      font-size: 18px;
+    }
+    @include for-size(phone-only) {
+      margin-bottom: 20px;
+    }
+
+
+  }
+}

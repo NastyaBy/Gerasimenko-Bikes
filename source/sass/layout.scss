@@ -14,6 +14,16 @@
     position: relative;
     max-width: 875px;
     margin: 0 auto -63px;
+
+    @include for-size(tablet) {
+      margin: 0;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    gap: 90px
   }
 }
 
