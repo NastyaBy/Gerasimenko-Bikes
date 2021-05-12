@@ -5,6 +5,11 @@
   padding: 63px 0 0;
   margin: -63px 0 0 0;
 
+  @include for-size(tablet) {
+    margin: 0;
+    padding: 0;
+  }
+
 
   &__inner {
     position: relative;
@@ -12,7 +17,7 @@
     display: flex;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 305px 0 385px 0;
+    padding: 242px 0 240px 0;
     gap: 160px;
     align-items: center;
     justify-content: center;
@@ -26,7 +31,11 @@
   }
 
   &__info {
-    width: 393px;
+    max-width: 393px;
+    @include for-size(tablet) {
+      max-width: 100%;
+    }
+
   }
 
   &__form {

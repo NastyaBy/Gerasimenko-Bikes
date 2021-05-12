@@ -3,6 +3,10 @@
 .form {
   position: relative;
 
+  @include for-size(phone-only) {
+    padding: 0 16px;
+  }
+
   &__title {
     margin-bottom: 20px;
     font-weight: 600;
