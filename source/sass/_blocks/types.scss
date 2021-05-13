@@ -1,9 +1,13 @@
 @import '../variables.scss';
 
 .types {
-  padding-top: 150px;
+  padding: 150px 0 130px;
   text-align: center;
   background: $types-background-color;
+
+  @include for-size(tablet) {
+    padding-top: 50px;
+  }
 
   &__title {
     margin-top: 0;
@@ -12,27 +16,51 @@
     line-height: 30px;
     letter-spacing: -0.005em;
     color: $types-title-color;
+
+    @include for-size(tablet) {
+      font-size: 24px;
+      line-height: 41px;
+      margin-bottom: 29px;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: center;
-
+    flex-wrap: wrap;
     gap: 50px;
+
+    @include for-size(tablet) {
+      gap: 30px 50px;
+    }
+
+    @include for-size(phone-only) {
+      gap: 23px;
+    }
+
   }
 
   &__item {
 
     &--road {
       margin-top: 35px;
+      @include for-size(tablet) {
+        margin-top: 0;
+      }
     }
 
     &--mountain {
       margin-top: 64px;
+      @include for-size(tablet) {
+        margin-top: 0;
+      }
     }
 
     &--children {
       margin-top: 25px;
+      @include for-size(tablet) {
+        margin-top: 0;
+      }
     }
   }
 
@@ -53,6 +81,19 @@
         height: 180px;
         margin: -100px 0 0 -60px;
         background: url("data:image/svg+xml,%3Csvg width='180' height='180' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='90' cy='90' r='76.5' stroke='%230AD9C6' stroke-width='27'/%3E%3C/svg%3E") no-repeat;
+
+        @include for-size(tablet) {
+          width: 127px;
+          height: 127px;
+          top: auto;
+          bottom: 0;
+          margin: 0 0px -18px -37px;
+          background: url("data:image/svg+xml,%3Csvg width='127' height='127' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='63.5' cy='63.5' r='54.5' stroke='%230AD9C6' stroke-width='18'/%3E%3C/svg%3E") no-repeat;
+        }
+
+        @include for-size(phone-only) {
+          margin: 0 0px -19px -25px;
+        }
       }
     }
 
@@ -102,6 +143,17 @@
         height: 95px;
         margin: -32px -36px 0 0;
         background: url("data:image/svg+xml,%3Csvg width='95' height='95' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='47.5' cy='47.5' r='39' stroke='%230AD9C6' stroke-width='17'/%3E%3C/svg%3E") no-repeat;
+
+        @include for-size(tablet) {
+          width: 68px;
+          height: 68px;
+          margin: -20px -25px 0 0;
+          background: url("data:image/svg+xml,%3Csvg width='68' height='68' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='34' cy='34' r='27.5' stroke='%230AD9C6' stroke-width='13'/%3E%3C/svg%3E%0A") no-repeat;
+        }
+
+        @include for-size(phone-only) {
+          margin: -21px -14px 0 0;
+        }
       }
     }
 
