@@ -90,8 +90,61 @@
 
   </section>
 
-  <section id="typesBikes">
-    <h2>Виды велосипедов</h2>
+  <section class="types" id="typesBikes">
+    <h2 class="types__title">Виды велосипедов</h2>
+    <div class="types__list">
+      <div class="types__item types__item--road">
+        <picture class="types__item-picture types__item-picture--road">
+          <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="./img/road-bike-desktop@1x.webp 1x, ./img/road-bike-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/road-bike-tablet@1x.webp 1x, ./img/road-bike-tablet@2x.webp 2x">
+          <source type="image/webp"
+                  srcset="./img/road-bike-mobile@1x.webp 1x, ./img/road-bike-mobile@2x.webp 2x">
+          <source media="(min-width: 1024px)"
+                  srcset="./img/road-bike-desktop@1x.jpg 1x, ./img/road-bike-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+                  srcset="./img/road-bike-tablet@1x.jpg 1x, ./img/road-bike-tablet@2x.jpg 2x">
+          <img src="img/road-bike-desktop@1x.jpg" srcset="./img/road-bike-desktop@2x.jpg 2x"
+               alt="Дорожный велосипед">
+        </picture>
+        <h3 class="types__item-title">Дорожный велосипед</h3>
+      </div>
+      <div class="types__item types__item--mountain">
+        <picture class="types__item-picture types__item-picture--mountain">
+          <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="./img/mountain-bike-desktop@1x.webp 1x, ./img/mountain-bike-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/mountain-bike-tablet@1x.webp 1x, ./img/mountain-bike-tablet@2x.webp 2x">
+          <source type="image/webp"
+                  srcset="./img/mountain-bike-mobile@1x.webp 1x, ./img/mountain-bike-mobile@2x.webp 2x">
+          <source media="(min-width: 1024px)"
+                  srcset="./img/mountain-bike-desktop@1x.jpg 1x, ./img/mountain-bike-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+                  srcset="./img/mountain-bike-tablet@1x.jpg 1x, ./img/mountain-bike-tablet@2x.jpg 2x">
+          <img src="img/mountain-bike-desktop@1x.jpg" srcset="./img/mountain-bike-desktop@2x.jpg 2x"
+               alt="Горный велосипед">
+        </picture>
+        <h3 class="types__item-title">Горный велосипед</h3>
+      </div>
+      <div class="types__item types__item--children">
+        <picture class="types__item-picture types__item-picture--children">
+          <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="./img/childrens-bike-desktop@1x.webp 1x, ./img/childrens-bike-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/childrens-bike-tablet@1x.webp 1x, ./img/childrens-bike-tablet@2x.webp 2x">
+          <source type="image/webp"
+                  srcset="./img/childrens-bike-mobile@1x.webp 1x, ./img/childrens-bike-mobile@2x.webp 2x">
+          <source media="(min-width: 1024px)"
+                  srcset="./img/childrens-bike-desktop@1x.jpg 1x, ./img/childrens-bike-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+                  srcset="./img/childrens-bike-tablet@1x.jpg 1x, ./img/childrens-bike-tablet@2x.jpg 2x">
+          <img src="img/childrens-bike-desktop@1x.jpg" srcset="./img/childrens-bike-desktop@2x.jpg 2x"
+               alt="Дорожный велосипед">
+        </picture>
+        <h3 class="types__item-title">Детский велосипед</h3>
+      </div>
+    </div>
   </section>
 
   <section id="videoBicycles">
