@@ -1,13 +1,17 @@
 @import '../variables.scss';
 
 .types {
-  padding: 150px 0 130px;
+  padding: 150px 0 129px;
   text-align: center;
   background: $types-background-color;
 
   @include for-size(tablet) {
-    padding-top: 50px;
+    padding: 50px 0;
     overflow: hidden;
+  }
+
+  @include for-size(phone-only) {
+    padding: 50px 0 32px;
   }
 
   &__title {
@@ -21,7 +25,7 @@
     @include for-size(tablet) {
       font-size: 24px;
       line-height: 41px;
-      margin-bottom: 29px;
+      margin-bottom: 30px;
     }
   }
 
@@ -88,12 +92,12 @@
           height: 127px;
           top: auto;
           bottom: 0;
-          margin: 0 0px -18px -37px;
+          margin: 0 0 -28px -37px;
           background: url("data:image/svg+xml,%3Csvg width='127' height='127' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='63.5' cy='63.5' r='54.5' stroke='%230AD9C6' stroke-width='18'/%3E%3C/svg%3E") no-repeat;
         }
 
         @include for-size(phone-only) {
-          margin: 0 0px -19px -25px;
+          margin: 0 0px -28px -25px;
         }
       }
     }
@@ -124,7 +128,7 @@
         bottom: 0;
         width: 47px;
         height: 47px;
-        margin: 0 -23px -13px 0;
+        margin: 0 -23px -23px 0;
         background: url("data:image/svg+xml,%3Csvg width='47' height='47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%230AD9C6' stroke-width='8' d='M4 4h39v39H4z'/%3E%3C/svg%3E") no-repeat;
 
         @include for-size(tablet) {
@@ -167,7 +171,7 @@
   }
 
   &__item-title {
-    margin: 10px 0 20px;
+    margin: 20px 0 20px;
     font-weight: 600;
     font-size: 22px;
     line-height: 34px;

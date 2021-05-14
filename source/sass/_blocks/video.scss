@@ -1,0 +1,53 @@
+@import '../variables.scss';
+
+.video {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 173px;
+  padding-top: 95px;
+  background: $video-background-color;
+
+  @include for-size(tablet) {
+    margin-bottom: 84px;
+    padding-top: 45px;
+  }
+
+  @include for-size(phone-only) {
+    margin-bottom: 53px;
+    padding-top: 59px;
+  }
+
+  &__title {
+    margin: 25px auto 20px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -0.005em;
+    color: $basic-white;
+
+    @include for-size(tablet) {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    margin: 0 auto;
+    max-width: 350px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.005em;
+    color: $basic-white;
+    opacity: 0.7;
+
+    @include for-size(tablet) {
+      max-width: 475px;
+    }
+
+    @include for-size(phone-only) {
+      max-width: 305px;
+    }
+  }
+}

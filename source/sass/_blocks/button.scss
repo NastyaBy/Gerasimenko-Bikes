@@ -16,6 +16,10 @@
   font-family: 'Open Sans', 'Arial', sans-serif;
   border-radius: 6px;
 
+  @include for-size(phone-only) {
+    padding: 13px 28px 16px;
+  }
+
   &--form {
     width: 100%;
   }

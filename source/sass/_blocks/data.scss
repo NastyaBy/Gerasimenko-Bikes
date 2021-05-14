@@ -5,12 +5,12 @@
   text-align: center;
 
   @include for-size(tablet) {
-    padding: 46px 0 70px;
-  }
-  @include for-size(phone-only) {
-    padding-bottom: 75px;
+    padding: 46px 0 68px;
   }
 
+  @include for-size(phone-only) {
+    padding: 47px 0 75px;
+  }
 
   &__title {
     margin: 24px 0;

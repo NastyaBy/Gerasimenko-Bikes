@@ -28,10 +28,14 @@
   }
 
   &__footer {
-    padding: 24px 0 95px;
+    padding: 38px 0 95px;
 
     @include for-size(tablet) {
       padding: 20px 0 53px;
+    }
+
+    @include for-size(phone-only) {
+      padding-top: 30px;
     }
   }
 }
