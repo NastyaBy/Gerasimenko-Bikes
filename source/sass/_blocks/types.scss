@@ -42,11 +42,9 @@
     @include for-size(phone-only) {
       gap: 23px;
     }
-
   }
 
   &__item {
-
     &--road {
       margin-top: 35px;
       @include for-size(tablet) {
