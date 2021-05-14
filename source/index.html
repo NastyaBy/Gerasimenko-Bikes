@@ -18,7 +18,7 @@
       <a class="header-nav__link" href="#aboutUs" aria-label="О нас">О нас</a>
       <a class="header-nav__link" href="#typesBikes" aria-label="Виды велосипедов">Виды велосипедов</a>
       <a class="header-nav__link" href="#videoBicycles" aria-label="Видео про велосипеды">Видео про велосипеды</a>
-      <a class="header-nav-link" href="#contacts" aria-label="Контакты">Контакты</a>
+      <a class="header-nav__link" href="#contacts" aria-label="Контакты">Контакты</a>
     </nav>
   </form>
 </header>
@@ -27,18 +27,27 @@
   <h1 class="visually-hidden">Велосипеды</h1>
   <section class="intro">
     <picture class="intro__picture">
+      <!-- 1х: 319px; 2x: 638px -->
+      <source type="image/webp" media="(max-width: 767px)"
+              srcset="./img/background-main-block-mobile@1x.webp 1x, ./img/background-main-block-mobile@2x.webp 2x">
+      <!-- 1х: 767px; 2x: 1534px -->
+      <source type="image/webp" media="(max-width: 1023px)"
+              srcset="./img/background-main-block-tablet@1x.webp 1x, ./img/background-main-block-tablet@2x.webp 2x">
+      <!-- 1х: 1440px; 2x: 2880px -->
       <source type="image/webp" media="(min-width: 1024px)"
               srcset="./img/background-main-block-desktop@1x.webp 1x, ./img/background-main-block-desktop@2x.webp 2x">
-      <source type="image/webp" media="(min-width: 768px)"
-              srcset="./img/background-main-block-tablet@1x.webp 1x, ./img/background-main-block-tablet@2x.webp 2x">
-      <source type="image/webp"
-              srcset="./img/background-main-block-mobile@1x.webp 1x, ./img/background-main-block-mobile@2x.webp 2x">
+      <!-- 1х: 319px; 2x: 638px -->
+      <source media="(max-width: 767px)"
+              srcset="./img/background-main-block-mobile@1x.jpg 1x, ./img/background-main-block-mobile@2x.jpg 2x">
+      <!-- 1х: 767px; 2x: 1534px -->
+      <source media="(max-width: 1023px)"
+              srcset="./img/background-main-block-tablet@1x.jpg 1x, ./img/background-main-block-tablet@2x.jpg 2x">
+      <!-- 1х: 1440px; 2x: 2880px -->
       <source media="(min-width: 1024px)"
               srcset="./img/background-main-block-desktop@1x.jpg 1x, ./img/background-main-block-desktop@2x.jpg 2x">
-      <source media="(min-width: 768px)"
-              srcset="./img/background-main-block-tablet@1x.jpg 1x, ./img/background-main-block-tablet@2x.jpg 2x">
+      <!-- 1х: 1440px; 2x: 2880px -->
       <img src="img/background-main-block-desktop@1x.jpg" srcset="./img/background-main-block-desktop@2x.jpg 2x"
-           alt="Горный велосипед">
+           width="1440" height="825" alt="Горный велосипед">
     </picture>
     <div class="intro__inner">
       <div class="intro__info">
@@ -94,52 +103,79 @@
     <div class="types__list">
       <div class="types__item types__item--road">
         <picture class="types__item-picture types__item-picture--road">
+          <!-- 1х: 270px; 2x: 540px -->
+          <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/road-bike-mobile@1x.webp 1x, ./img/road-bike-mobile@2x.webp 2x">
+          <!-- 1х: 270px; 2x: 540px -->
+          <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="./img/road-bike-tablet@1x.webp 1x, ./img/road-bike-tablet@2x.webp 2x">
+          <!-- 1х: 342px; 2x: 684px -->
           <source type="image/webp" media="(min-width: 1024px)"
                   srcset="./img/road-bike-desktop@1x.webp 1x, ./img/road-bike-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)"
-                  srcset="./img/road-bike-tablet@1x.webp 1x, ./img/road-bike-tablet@2x.webp 2x">
-          <source type="image/webp"
-                  srcset="./img/road-bike-mobile@1x.webp 1x, ./img/road-bike-mobile@2x.webp 2x">
+          <!-- 1х: 270px; 2x: 540px -->
+          <source media="(max-width: 767px)"
+                  srcset="./img/road-bike-mobile@1x.jpg 1x, ./img/road-bike-mobile@2x.jpg 2x">
+          <!-- 1х: 270px; 2x: 540px -->
+          <source media="(max-width: 1023px)"
+                  srcset="./img/road-bike-tablet@1x.jpg 1x, ./img/road-bike-tablet@2x.jpg 2x">
+          <!-- 1х: 342px; 2x: 684px -->
           <source media="(min-width: 1024px)"
                   srcset="./img/road-bike-desktop@1x.jpg 1x, ./img/road-bike-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)"
-                  srcset="./img/road-bike-tablet@1x.jpg 1x, ./img/road-bike-tablet@2x.jpg 2x">
-          <img src="img/road-bike-desktop@1x.jpg" srcset="./img/road-bike-desktop@2x.jpg 2x"
+          <!-- 1х: 342px; 2x: 684px -->
+          <img src="img/road-bike-desktop@1x.jpg" srcset="./img/road-bike-desktop@2x.jpg 2x" width="342" height="503"
                alt="Дорожный велосипед">
         </picture>
         <h3 class="types__item-title">Дорожный велосипед</h3>
       </div>
       <div class="types__item types__item--mountain">
         <picture class="types__item-picture types__item-picture--mountain">
+          <!-- 1х: 270px; 2x: 540px -->
+          <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/mountain-bike-mobile@1x.webp 1x, ./img/mountain-bike-mobile@2x.webp 2x">
+          <!-- 1х: 270px; 2x: 540px -->
+          <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="./img/mountain-bike-tablet@1x.webp 1x, ./img/mountain-bike-tablet@2x.webp 2x">
+          <!-- 1х: 342px; 2x: 684px -->
           <source type="image/webp" media="(min-width: 1024px)"
                   srcset="./img/mountain-bike-desktop@1x.webp 1x, ./img/mountain-bike-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)"
-                  srcset="./img/mountain-bike-tablet@1x.webp 1x, ./img/mountain-bike-tablet@2x.webp 2x">
-          <source type="image/webp"
-                  srcset="./img/mountain-bike-mobile@1x.webp 1x, ./img/mountain-bike-mobile@2x.webp 2x">
+          <!-- 1х: 270px; 2x: 540px -->
+          <source media="(max-width: 767px)"
+                  srcset="./img/mountain-bike-mobile@1x.jpg 1x, ./img/mountain-bike-mobile@2x.jpg 2x">
+          <!-- 1х: 270px; 2x: 540px -->
+          <source media="(max-width: 1023px)"
+                  srcset="./img/mountain-bike-tablet@1x.jpg 1x, ./img/mountain-bike-tablet@2x.jpg 2x">
+          <!-- 1х: 342px; 2x: 684px -->
           <source media="(min-width: 1024px)"
                   srcset="./img/mountain-bike-desktop@1x.jpg 1x, ./img/mountain-bike-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)"
-                  srcset="./img/mountain-bike-tablet@1x.jpg 1x, ./img/mountain-bike-tablet@2x.jpg 2x">
-          <img src="img/mountain-bike-desktop@1x.jpg" srcset="./img/mountain-bike-desktop@2x.jpg 2x"
-               alt="Горный велосипед">
+          <!-- 1х: 342px; 2x: 684px -->
+          <img src="img/mountain-bike-desktop@1x.jpg" srcset="./img/mountain-bike-desktop@2x.jpg 2x" width="342"
+               height="566" alt="Горный велосипед">
         </picture>
         <h3 class="types__item-title">Горный велосипед</h3>
       </div>
       <div class="types__item types__item--children">
         <picture class="types__item-picture types__item-picture--children">
+          <!-- 1х: 270px; 2x: 540px -->
+          <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/childrens-bike-mobile@1x.webp 1x, ./img/childrens-bike-mobile@2x.webp 2x">
+          <!-- 1х: 270px; 2x: 540px -->
+          <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="./img/childrens-bike-tablet@1x.webp 1x, ./img/childrens-bike-tablet@2x.webp 2x">
+          <!-- 1х: 342px; 2x: 684px -->
           <source type="image/webp" media="(min-width: 1024px)"
                   srcset="./img/childrens-bike-desktop@1x.webp 1x, ./img/childrens-bike-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)"
-                  srcset="./img/childrens-bike-tablet@1x.webp 1x, ./img/childrens-bike-tablet@2x.webp 2x">
-          <source type="image/webp"
-                  srcset="./img/childrens-bike-mobile@1x.webp 1x, ./img/childrens-bike-mobile@2x.webp 2x">
+          <!-- 1х: 270px; 2x: 540px -->
+          <source media="(max-width: 767px)"
+                  srcset="./img/childrens-bike-mobile@1x.jpg 1x, ./img/childrens-bike-mobile@2x.jpg 2x">
+          <!-- 1х: 270px; 2x: 540px -->
+          <source media="(max-width: 1023px)"
+                  srcset="./img/childrens-bike-tablet@1x.jpg 1x, ./img/childrens-bike-tablet@2x.jpg 2x">
+          <!-- 1х: 342px; 2x: 684px -->
           <source media="(min-width: 1024px)"
                   srcset="./img/childrens-bike-desktop@1x.jpg 1x, ./img/childrens-bike-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)"
-                  srcset="./img/childrens-bike-tablet@1x.jpg 1x, ./img/childrens-bike-tablet@2x.jpg 2x">
-          <img src="img/childrens-bike-desktop@1x.jpg" srcset="./img/childrens-bike-desktop@2x.jpg 2x"
-               alt="Дорожный велосипед">
+          <!-- 1х: 342px; 2x: 684px -->
+          <img src="img/childrens-bike-desktop@1x.jpg" srcset="./img/childrens-bike-desktop@2x.jpg 2x" width="342"
+               height="513" alt="Дорожный велосипед">
         </picture>
         <h3 class="types__item-title">Детский велосипед</h3>
       </div>
@@ -155,18 +191,23 @@
     <p class="contacts__text">Мы находимся по адресу:<br class="br-phone-only"> Санкт-Петербург, ул. Большая Конюшенная,
       д. 19</p>
     <picture class="contacts__picture">
+      <!-- 1х: 319px; 2x: 638px -->
+      <source type="image/webp" media="(max-width: 767px)"
+              srcset="./img/map-mobile@1x.webp 1x, ./img/map-mobile@2x.webp 2x">
+      <!-- 1х: 698px; 2x: 1396px -->
+      <source type="image/webp" media="(max-width: 1023px)"
+              srcset="./img/map-tablet@1x.webp 1x, ./img/map-tablet@2x.webp 2x">
+      <!-- 1х: 957px; 2x: 1914px -->
       <source type="image/webp" media="(min-width: 1024px)"
               srcset="./img/map-desktop@1x.webp 1x, ./img/map-desktop@2x.webp 2x">
-      <source type="image/webp" media="(min-width: 768px)"
-              srcset="./img/map-tablet@1x.webp 1x, ./img/map-tablet@2x.webp 2x">
-      <source type="image/webp"
-              srcset="./img/map-mobile@1x.webp 1x, ./img/map-mobile@2x.webp 2x">
-      <source media="(min-width: 1024px)"
-              srcset="./img/map-desktop@1x.jpg 1x, ./img/map-desktop@2x.jpg 2x">
-      <source media="(min-width: 768px)"
-              srcset="./img/map-tablet@1x.jpg 1x, ./img/map-tablet@2x.jpg 2x">
-      <img src="img/map-mobile@1x.jpg" srcset="./img/map-mobile@2x.jpg 2x"
-           alt="Карта">
+      <!-- 1х: 319px; 2x: 638px -->
+      <source media="(max-width: 767px)" srcset="./img/map-mobile@1x.jpg 1x, ./img/map-mobile@2x.jpg 2x">
+      <!-- 1х: 698px; 2x: 1396px -->
+      <source media="(max-width: 1023px)" srcset="./img/map-tablet@1x.jpg 1x, ./img/map-tablet@2x.jpg 2x">
+      <!-- 1х: 957px; 2x: 1914px -->
+      <source media="(min-width: 1024px)" srcset="./img/map-desktop@1x.jpg 1x, ./img/map-desktop@2x.jpg 2x">
+      <!-- 1х: 957px; 2x: 1914px -->
+      <img src="img/map-desktop@1x.jpg" srcset="./img/map-desktop@2x.jpg 2x" width="957" height="530" alt="Карта">
     </picture>
   </section>
 </main>

@@ -160,9 +160,10 @@
 
     & > * {
       border-radius: 11px;
+      display: block;
+      height: auto;
+      width: 100%;
     }
-
-
   }
 
   &__item-title {
