@@ -9,18 +9,15 @@
 
 </head>
 
-<body class="layout">
+<body class="layout no-js">
 <header class="layout__header">
-  <form class="header-toggle">
-    <label class="header-toggle__text" for="toggle"></label>
-    <input class="header-toggle__control" type="checkbox" name="color" id="toggle" value="Toggle">
-    <nav class="header-nav">
-      <a class="header-nav__link" href="#aboutUs" aria-label="О нас">О нас</a>
-      <a class="header-nav__link" href="#typesBikes" aria-label="Виды велосипедов">Виды велосипедов</a>
-      <a class="header-nav__link" href="#videoBicycles" aria-label="Видео про велосипеды">Видео про велосипеды</a>
-      <a class="header-nav__link" href="#contacts" aria-label="Контакты">Контакты</a>
-    </nav>
-  </form>
+  <button class=" header-toggle js-menuToggle" type="button"></button>
+  <nav class="header-nav js-menuPopup">
+    <a class="header-nav__link js-navigation" href="#aboutUs" aria-label="О нас">О нас</a>
+    <a class="header-nav__link js-navigation" href="#typesBikes" aria-label="Виды велосипедов">Виды велосипедов</a>
+    <a class="header-nav__link js-navigation" href="#videoBicycles" aria-label="Видео про велосипеды">Видео про велосипеды</a>
+    <a class="header-nav__link js-navigation" href="#contacts" aria-label="Контакты">Контакты</a>
+  </nav>
 </header>
 
 <main class="layout__main">

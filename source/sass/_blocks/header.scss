@@ -15,8 +15,10 @@
 
   @include for-size(tablet) {
     display: none;
-    position: relative;
+    position: fixed;
+    top: 0;
     right: 0;
+    bottom: 0;
     left: 0;
     flex-direction: column;
     justify-content: flex-start;
@@ -24,6 +26,20 @@
     margin: -50px 0 0;
     padding: 117px 0 0;
     background: $basic-white;
+  }
+
+  .no-js & {
+    @include for-size(tablet) {
+      display: flex;
+      position: relative;
+      margin: 10px 0;
+      padding: 0;
+      gap: 10px
+    }
+  }
+
+  &--active {
+    display: flex;
   }
 
   &__link {
@@ -40,10 +56,10 @@
     opacity: 0.7;
 
     @include for-size(tablet) {
-      align-self: baseline;
+      align-self: stretch;
       margin: 0;
       padding: 15px;
-      width: 100%;
+
       font-weight: normal;
       font-size: 20px;
       line-height: 28px;
@@ -56,50 +72,29 @@
 }
 
 .header-toggle {
+  display: none;
   @include for-size(tablet) {
-    position: relative;
     display: block;
-    width: 100%;
-  }
+    width: 50px;
+    height: 50px;
+    margin: 0 0 0 auto;
+    padding: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+    box-sizing: border-box;
+    background: $accent-color url("data:image/svg+xml,%3Csvg width='22' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M.75 14h22.5v-1H.75v1zm0-6.25h22.5v-1H.75v1zM.75.5v1h22.5v-1H.75z' fill='%23000'/%3E%3C/svg%3E") 50% 50% no-repeat;
+    background-size: 30px auto;
+    border: none;
 
-  &__control {
-    display: none;
-    @include for-size(tablet) {
-      position: absolute;
-      z-index: -1;
-      opacity: 0;
-
-      &:checked {
-        $checkboxIsChecked: & !global;
-
-        & ~ #{$header-nav} {
-          display: flex;
-        }
-      }
+    .no-js & {
+      display: none;
     }
   }
 
-  &__text {
-    &::before {
-      @include for-size(tablet) {
-        content: "";
-        display: block;
-        width: 50px;
-        height: 50px;
-        margin-left: auto;
-        flex-shrink: 0;
-        flex-grow: 0;
-        box-sizing: border-box;
-        background: $accent-color url("data:image/svg+xml,%3Csvg width='22' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M.75 14h22.5v-1H.75v1zm0-6.25h22.5v-1H.75v1zM.75.5v1h22.5v-1H.75z' fill='%23000'/%3E%3C/svg%3E") 50% 50% no-repeat;
-        background-size: 30px auto;
-
-        #{$checkboxIsChecked} + & {
-          position: relative;
-          z-index:3;
-          background: url("data:image/svg+xml,%3Csvg width='24' height='25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 23.721L23 1m0 22.721L1 1' stroke='%23141517' stroke-opacity='.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% 50% no-repeat;
-          background-size: 20px auto;
-        }
-      }
-    }
+  &--active {
+    position: relative;
+    z-index: 3;
+    background: url("data:image/svg+xml,%3Csvg width='24' height='25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 23.721L23 1m0 22.721L1 1' stroke='%23141517' stroke-opacity='.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% 50% no-repeat;
+    background-size: 20px auto;
   }
 }

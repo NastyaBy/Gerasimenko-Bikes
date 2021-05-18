@@ -1,10 +1,31 @@
 'use strict';
 
+const layout = document.querySelector('.layout');
+const menuToggle = document.querySelector('.js-menuToggle');
+const menuPopup = document.querySelector('.js-menuPopup');
+const navigations = document.querySelectorAll('.js-navigation');
+
 const inputName = document.querySelector('.js-validateName');
 const inputTel = document.querySelector('.js-validateTel');
 const form = document.querySelector('.js-form');
 const sendForm = document.querySelector('.js-sendForm');
-const openMenu = document.querySelector('.js-openMenu');
+
+layout.classList.remove('no-js');
+
+
+
+menuToggle.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  menuToggle.classList.toggle('header-toggle--active');
+  menuPopup.classList.toggle('header-nav--active');
+});
+
+navigations.forEach(trigger => (
+  trigger.addEventListener('click', () => {
+    menuToggle.classList.remove('header-toggle--active');
+    menuPopup.classList.remove('header-nav--active');
+  })
+));
 
 const inputHandlerTel = (e) => {
   const el = e.target;
@@ -31,10 +52,3 @@ sendForm.addEventListener('click', () => {
   const serialObj = JSON.stringify(obj);
   localStorage.setItem('order', serialObj);
 });
-
-openMenu.addEventListener('checked', () => {
-  document.querySelector('.header-nav').classList.add ('header-nav--js');
-  },
-);
-
-
