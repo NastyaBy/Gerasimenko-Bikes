@@ -38,6 +38,10 @@
     &:hover {
       transform: translate(-50%, -50%) scale(1.2);
     }
+
+    &:active {
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__button-icon {
