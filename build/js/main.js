@@ -12,8 +12,6 @@ const sendForm = document.querySelector('.js-sendForm');
 
 layout.classList.remove('no-js');
 
-
-
 menuToggle.addEventListener('click', (evt) => {
   evt.preventDefault();
   menuToggle.classList.toggle('header-toggle--active');
