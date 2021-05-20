@@ -4,7 +4,6 @@ var layout = document.querySelector('.layout');
 var menuToggle = document.querySelector('.js-menuToggle');
 var menuPopup = document.querySelector('.js-menuPopup');
 var navigations = document.querySelectorAll('.js-navigation');
-
 var inputName = document.querySelector('.js-validateName');
 var inputTel = document.querySelector('.js-validateTel');
 var sendForm = document.querySelector('.js-sendForm');
@@ -45,13 +44,18 @@ function inputHandlerName(e) {
 if (inputTel) {
   inputTel.addEventListener('input', inputHandlerTel);
 }
-inputName.addEventListener('input', inputHandlerName);
 
-sendForm.addEventListener('click', function () {
-  var obj = {
-    name: inputName.value,
-    tel: inputTel.value,
-  };
-  var serialObj = JSON.stringify(obj);
-  localStorage.setItem('order', serialObj);
-});
+if (inputName) {
+  inputName.addEventListener('input', inputHandlerName);
+}
+
+if (sendForm) {
+  sendForm.addEventListener('click', function () {
+    var obj = {
+      name: inputName.value,
+      tel: inputTel.value,
+    };
+    var serialObj = JSON.stringify(obj);
+    localStorage.setItem('order', serialObj);
+  });
+}
