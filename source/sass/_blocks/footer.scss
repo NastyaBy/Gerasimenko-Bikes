@@ -1,21 +1,22 @@
-@import '../variables.scss';
+@import "../variables.scss";
+@import "../mixins/media";
 
 .footer {
   display: flex;
   justify-content: center;
   gap: 74px;
 
-  @include for-size(tablet) {
+  @include media-tablet {
     gap: 90px;
   }
 
-  @include for-size(phone-only) {
+  @include media-mobile {
     flex-direction: column;
     align-items: center;
     gap: 22px;
   }
 
-  &__link {
+  a {
     display: flex;
     align-items: center;
     font-weight: normal;
@@ -24,9 +25,9 @@
     text-decoration: none;
     cursor: pointer;
     color: $footer-link-color;
-  }
 
-  &__link-icon {
-    margin-right: 15px;
+    svg {
+      margin-right: 15px;
+    }
   }
 }

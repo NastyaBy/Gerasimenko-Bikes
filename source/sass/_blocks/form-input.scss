@@ -1,11 +1,10 @@
-@import '../variables.scss';
+@import "../variables.scss";
+@import "../mixins/media";
 
 .form-input {
   margin-bottom: 20px;
-  @include for-size(phone-only) {
-  }
 
-  &__input {
+  input {
     width: 100%;
     padding: 14px 28px 8px;
     font-size: 15px;
@@ -14,11 +13,11 @@
     border: 1px solid $form-input-border-color;
     border-radius: 6px;
 
-    @include for-size(tablet) {
+    @include media-tablet {
       padding: 13px 21px 9px;
     }
 
-    @include for-size(phone-only) {
+    @include media-mobile {
       padding: 13px 25px 9px;
     }
   }

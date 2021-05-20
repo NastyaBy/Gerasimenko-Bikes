@@ -1,13 +1,14 @@
-@import '../variables.scss';
+@import "../variables.scss";
+@import "../mixins/media";
 
 .form {
   position: relative;
 
-  @include for-size(phone-only) {
+  @include media-mobile {
     padding: 0 16px;
   }
 
-  &__title {
+  h3 {
     margin: 8px 0 19px;
     font-weight: 600;
     font-size: 17px;
@@ -16,14 +17,19 @@
     letter-spacing: -0.005em;
     color: $basic-white;
 
-    @include for-size(tablet) {
+    @include media-tablet {
       color: $basic-dark;
       max-width: 321px;
       margin: 16px 0 30px;
       font-size: 18px;
     }
-    @include for-size(phone-only) {
+
+    @include media-mobile {
       margin-bottom: 20px;
     }
+  }
+
+  button {
+    width: 100%;
   }
 }

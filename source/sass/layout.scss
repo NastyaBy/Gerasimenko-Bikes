@@ -1,45 +1,46 @@
-@import 'variables.scss';
+@import "variables.scss";
+@import "./mixins/media";
 
 .layout {
   min-height: 100%;
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
-  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 32px;
   background-color: $layout-background-color;
+}
 
-  &__header {
-    position: relative;
-    z-index: 2;
-    max-width: 875px;
-    margin: 0 auto;
+.layout__header {
+  position: relative;
+  z-index: 5;
+  max-width: 875px;
+  margin: 0 auto;
 
-    @include for-size(tablet) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      max-width: 100%;
-      margin: 0;
+  @include media-tablet {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    max-width: 100%;
+    margin: 0;
 
-      .no-js & {
-        position: relative;
-      }
+    .no-js & {
+      position: relative;
     }
   }
+}
 
-  &__footer {
-    padding: 38px 0 95px;
+.layout__footer {
+  padding: 38px 0 95px;
 
-    @include for-size(tablet) {
-      padding: 20px 0 53px;
-    }
+  @include media-tablet {
+    padding: 20px 0 53px;
+  }
 
-    @include for-size(phone-only) {
-      padding-top: 30px;
-    }
+  @include media-mobile {
+    padding-top: 30px;
   }
 }
 
@@ -58,9 +59,8 @@
 
 .br-phone-only {
   display: none;
-  @include for-size(phone-only) {
+
+  @include media-mobile {
     display: block;
   }
 }
-
-

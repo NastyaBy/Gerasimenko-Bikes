@@ -1,26 +1,27 @@
-@import '../variables.scss';
+@import "../variables.scss";
+@import "../mixins/media";
 
 .player {
   position: relative;
   margin: 56px auto -98px;
 
-  @include for-size(tablet) {
+  @include media-tablet {
     margin: 40px auto -85px;
   }
 
-  @include for-size(phone-only) {
+  @include media-mobile {
     margin: 53px auto -49px;
   }
 
-  &__picture {
-    & > * {
+  picture {
+    img {
       display: block;
       width: 100%;
       height: auto;
     }
   }
 
-  &__button {
+  button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,7 +32,6 @@
     border: 0;
     background: 0 0;
     transform: translate(-50%, -50%);
-    z-index: 5;
     outline: 0;
     cursor: pointer;
 
@@ -42,20 +42,20 @@
     &:active {
       transform: translate(-50%, -50%);
     }
-  }
 
-  &__button-icon {
-    width: 65px;
-    height: 65px;
-
-    @include for-size(tablet) {
-      width: 90px;
-      height: 90px;
-    }
-
-    @include for-size(phone-only) {
+    svg {
       width: 65px;
       height: 65px;
+
+      @include media-tablet {
+        width: 90px;
+        height: 90px;
+      }
+
+      @include media-mobile {
+        width: 65px;
+        height: 65px;
+      }
     }
   }
 }
