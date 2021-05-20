@@ -1,13 +1,11 @@
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
-
 @mixin retina-size {
   @media (min-resolution: 2dppx) {
     @content;
   }
 }
-
 
 @mixin media-mobile {
   @media (max-width: $tablet-width - 1) {
