@@ -2,7 +2,9 @@
 @import "./mixins/media";
 
 .layout {
-  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
@@ -42,6 +44,10 @@
   @include media-mobile {
     padding-top: 30px;
   }
+}
+
+.layout__main {
+  flex-grow: 1;
 }
 
 .visually-hidden:not(:focus):not(:active) {
