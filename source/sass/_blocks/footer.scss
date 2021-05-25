@@ -2,19 +2,23 @@
 @import "../mixins/media";
 
 .footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   flex-wrap: wrap;
+  justify-items: center;
+  row-gap: 23px;
+  column-gap: 30px;
 
   @include media-mobile {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     align-items: center;
   }
 
   a {
     display: flex;
-    margin: 0 52px 0 38px;
     align-items: center;
+    justify-self: end;
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
@@ -23,7 +27,7 @@
     color: $footer-link-color;
 
     @include media-mobile {
-      margin: 0 0 22px;
+      justify-self: unset;
     }
 
     &:hover {
@@ -32,6 +36,16 @@
 
     &:focus {
       text-decoration: underline;
+    }
+
+    &:nth-child(2n) {
+      justify-self: start;
+      margin-left: 60px;
+
+      @include media-mobile {
+        justify-self: unset;
+        margin-left: 0;
+      }
     }
 
     svg {

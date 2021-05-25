@@ -3,13 +3,12 @@
 
 .intro {
   position: relative;
-  padding: 63px 0 0;
-  margin: -63px 0 0 0;
+  padding-top: 63px;
 
   @include media-tablet {
-    margin: 0;
-    padding: 0;
+    padding-top: 0;
   }
+
 
   picture {
     position: absolute;

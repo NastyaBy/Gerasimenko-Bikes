@@ -23,6 +23,7 @@
   z-index: 5;
   max-width: 875px;
   margin: 0 auto;
+  height: 0;
 
   @include media-tablet {
     position: absolute;
