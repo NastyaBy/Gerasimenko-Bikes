@@ -4,10 +4,11 @@
 .footer {
   display: flex;
   justify-content: center;
-  gap: 74px;
+  flex-wrap: wrap;
+  gap: 20px 74px;
 
   @include media-tablet {
-    gap: 90px;
+    gap: 20px 90px;
   }
 
   @include media-mobile {
