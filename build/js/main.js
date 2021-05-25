@@ -25,6 +25,7 @@ if (navigations) {
     trigger.addEventListener('click', function () {
       menuToggle.classList.remove('header-toggle--active');
       menuPopup.classList.remove('header-nav--active');
+      layout.classList.remove('layout--no-scroll');
     });
   });
 }

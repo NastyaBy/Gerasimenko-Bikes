@@ -6,11 +6,11 @@
   text-align: center;
 
   @include media-tablet {
-    padding: 46px 0 68px;
+    padding: 46px 0 52px;
   }
 
   @include media-mobile {
-    padding: 47px 0 75px;
+    padding: 47px 0 54px;
   }
 
   h2 {
@@ -32,22 +32,29 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 41px;
     padding: 0;
 
     @include media-tablet {
-      gap: 15px 32px;
       margin: 0;
     }
 
     @include media-mobile {
-      gap: 10px;
+      margin: 0 0 10px;
     }
   }
 
   li {
     list-style-type: none;
     max-width: 260px;
+    margin: 0 20px;
+
+    @include media-tablet {
+      margin: 0 18px 15px;
+    }
+
+    @include media-mobile {
+      margin: 0 0 10px;
+    }
   }
 
   h3 {

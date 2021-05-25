@@ -8,11 +8,11 @@
   overflow: hidden;
 
   @include media-tablet {
-    padding: 50px 0 34px;
+    padding: 50px 0 4px;
   }
 
   @include media-mobile {
-    padding: 50px 0 16px;
+    padding: 50px 0 12px;
   }
 
   h2 {
@@ -34,23 +34,22 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 50px;
     padding: 0;
 
-    @include media-tablet {
-      gap: 30px 50px;
-    }
-
     @include media-mobile {
-      gap: 23px;
+      margin: 0;
     }
 
     li {
-      margin-top: 64px;
+      margin: 64px 25px 0;
       list-style-type: none;
 
       @include media-tablet {
-        margin-top: 0;
+        margin: 0 25px 30px;
+      }
+
+      @include media-mobile {
+        margin: 0 10px 22px;
       }
 
       picture {

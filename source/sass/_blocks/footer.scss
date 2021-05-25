@@ -5,21 +5,15 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px 74px;
-
-  @include media-tablet {
-    gap: 20px 90px;
-  }
 
   @include media-mobile {
     flex-direction: column;
     align-items: center;
-    gap: 22px;
   }
 
   a {
     display: flex;
-    margin-right: 15px;
+    margin: 0 52px 0 38px;
     align-items: center;
     font-weight: normal;
     font-size: 16px;
@@ -27,6 +21,10 @@
     text-decoration: none;
     cursor: pointer;
     color: $footer-link-color;
+
+    @include media-mobile {
+      margin: 0 0 22px;
+    }
 
     &:hover {
       color: $accent-color;
