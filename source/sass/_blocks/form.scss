@@ -31,5 +31,10 @@
 
   button {
     width: 100%;
+
+    &:focus {
+      color: $basic-white;
+      outline: 2px solid;
+    }
   }
 }

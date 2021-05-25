@@ -28,6 +28,14 @@
     cursor: pointer;
     color: $footer-link-color;
 
+    &:hover {
+      color: $accent-color;
+    }
+
+    &:focus {
+      text-decoration: underline;
+    }
+
     svg {
       margin-right: 15px;
     }

@@ -39,6 +39,11 @@
       transform: translate(-50%, -50%) scale(1.2);
     }
 
+    &:focus {
+      color: $basic-white;
+      outline: 2px solid;
+    }
+
     &:active {
       transform: translate(-50%, -50%);
     }
