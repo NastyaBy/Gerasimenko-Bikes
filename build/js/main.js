@@ -8,6 +8,7 @@ var inputName = document.querySelector('.js-validateName');
 var inputTel = document.querySelector('.js-validateTel');
 var sendForm = document.querySelector('.js-sendForm');
 
+
 layout.classList.remove('no-js');
 
 if (menuToggle) {
@@ -15,6 +16,7 @@ if (menuToggle) {
     evt.preventDefault();
     menuToggle.classList.toggle('header-toggle--active');
     menuPopup.classList.toggle('header-nav--active');
+    layout.classList.toggle('layout--no-scroll');
   });
 }
 
